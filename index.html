@@ -54,7 +54,12 @@
     <iframe src="https://snazzymaps.com/embed/119100" width="100%" height="350px" style="border:none;"></iframe>
 </section>
 <section class="contact">
-
+        <form name="contact" netlify>
+            <input type="text" name="name" placeholder="YOUR NAME" autocomplete="off" spellcheck="false" required/>
+            <input type="email" name="email" placeholder="EMAIL" autocomplete="off" spellcheck="false" required/>
+            <textarea class="message" rows="10" name="messege" placeholder="MESSAGE" form="contact" required></textarea>
+            <button type="submit">Send</button>
+        </form>
 </section>
 </body>
 </html>

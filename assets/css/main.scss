@@ -13,6 +13,8 @@ body {
     font-family: Ditto;
     font-weight: normal;
     color: $text;
+    box-sizing: border-box;
+
 }
 ::selection {
     background: #e79393;
@@ -265,6 +267,61 @@ body {
         @media only screen and (max-width: 700px) {
             margin-bottom: 4em;
             letter-spacing: 5px;
+        }
+    }
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    padding: 6em;
+    form{
+        grid-column: 1/2;
+        input, .message{
+            margin-top: 2em;
+            background: #040405;
+            color: #b1ada5;
+            width: 100%;
+            box-sizing: border-box;
+
+            font-size: 1em;
+            border: 0;
+            padding: 1.5em;
+            display: block;
+            resize: none;
+            &:focus{
+                outline: 2px solid #916f44;
+            }
+        }
+        .message{
+            font-size: 1.225em;
+        }
+
+        button{
+            padding: 1.5em 0em;
+            width: 40%;
+            float: right;
+            margin-top: 2em;
+            text-transform: uppercase;
+            color: #2a2e34;
+            border: none;
+            font: inherit;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 1em;
+            background-color:#040405 ;
+            cursor: pointer;
+            outline: 0;
+            &:active{
+                margin-top: 2.1em;
+            }
+        }
+        ::placeholder {
+            font-family: Ditto;
+            font-weight: bold;
+            color: #2a2e34;
+            letter-spacing: 2px;
+            opacity: 1;
         }
     }
 }

@@ -12,6 +12,8 @@ body {
   font-family: Ditto;
   font-weight: normal;
   color: #99805f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ::-moz-selection {
@@ -393,5 +395,94 @@ body {
     margin-bottom: 4em;
     letter-spacing: 5px;
   }
+}
+
+.contact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.7fr 1fr;
+      grid-template-columns: 0.7fr 1fr;
+  padding: 6em;
+}
+
+.contact form {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.contact form input, .contact form .message {
+  margin-top: 2em;
+  background: #040405;
+  color: #b1ada5;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1em;
+  border: 0;
+  padding: 1.5em;
+  display: block;
+  resize: none;
+}
+
+.contact form input:focus, .contact form .message:focus {
+  outline: 2px solid #916f44;
+}
+
+.contact form .message {
+  font-size: 1.225em;
+}
+
+.contact form button {
+  padding: 1.5em 0em;
+  width: 40%;
+  float: right;
+  margin-top: 2em;
+  text-transform: uppercase;
+  color: #2a2e34;
+  border: none;
+  font: inherit;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1em;
+  background-color: #040405;
+  cursor: pointer;
+  outline: 0;
+}
+
+.contact form button:active {
+  margin-top: 2.1em;
+}
+
+.contact form ::-webkit-input-placeholder {
+  font-family: Ditto;
+  font-weight: bold;
+  color: #2a2e34;
+  letter-spacing: 2px;
+  opacity: 1;
+}
+
+.contact form :-ms-input-placeholder {
+  font-family: Ditto;
+  font-weight: bold;
+  color: #2a2e34;
+  letter-spacing: 2px;
+  opacity: 1;
+}
+
+.contact form ::-ms-input-placeholder {
+  font-family: Ditto;
+  font-weight: bold;
+  color: #2a2e34;
+  letter-spacing: 2px;
+  opacity: 1;
+}
+
+.contact form ::placeholder {
+  font-family: Ditto;
+  font-weight: bold;
+  color: #2a2e34;
+  letter-spacing: 2px;
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */
