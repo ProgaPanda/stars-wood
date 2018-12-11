@@ -9,12 +9,13 @@ body {
     margin: 0;
     padding: 0;
     width:100%;
+    height: 100%;
     background: $main;
     font-family: Ditto;
     font-weight: normal;
     color: $text;
     box-sizing: border-box;
-
+    scroll-behavior: smooth;
 }
 ::selection {
     background: #e79393;
@@ -32,13 +33,19 @@ body {
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.85);
 
     @media only screen and (max-width: 1100px) {
-        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr;
         background-attachment: scroll;
 
     }
     .main-nav{
-        padding: 3em 5em;
+        width: 100%;
+        margin-top: 3em;
         font-size: 1.2em;
+        //top: 40px;
+        position: fixed;
+        justify-self: center;
+        z-index: 100;
+
         @media only screen and (max-width: 1100px) {
             grid-row: 1/2;
             grid-column: 1/3;
@@ -56,10 +63,11 @@ body {
         }
 
         ul{
+            margin: 0;
+            margin-right: 2em;
             float: right;
             list-style-type: none;
             padding: 0;
-            margin: 0;
             @media only screen and (max-width: 1100px) {
                 display: none;
             }
@@ -122,15 +130,22 @@ body {
         transform: translateX(-50%);
         border-radius: 50%;
         width: 50px; height: 50px;
-        background-color: $main;
+        background-color: rgba($color: #000000, $alpha: 0.1);
         text-decoration: none;
         color: $text;
         text-align: center;
         line-height: 55px;
         font-size: 2em;
         border: 2px solid $text;
-        -webkit-tap-highlight-color: rgba(0,0,0,0)
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        transition: all .2s ease-in;
+        &:hover{
+            background-color: rgba($color: $text, $alpha: 0.8);
+            color: $main;
+
+        }
     }
+  
 }
 
 .about{
@@ -204,6 +219,18 @@ body {
         font-size: 1.2em;
         background-size: cover;
         box-shadow: 0px 10px 15px 0px #000000;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+    }
+    .left{
+        &:hover{
+            //transform: rotate(45deg);
+        }
+    }
+    .right{
+        &:hover{
+            //transform: rotate(-45deg);
+        }
     }
     // type of product
     .veneer{
@@ -283,7 +310,6 @@ body {
             color: #b1ada5;
             width: 100%;
             box-sizing: border-box;
-
             font-size: 1em;
             border: 0;
             padding: 1.5em;
