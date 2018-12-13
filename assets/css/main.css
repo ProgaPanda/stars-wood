@@ -542,4 +542,10 @@ body {
   letter-spacing: 2px;
   opacity: 1;
 }
+
+@media only screen and (max-width: 1100px) {
+  .contact {
+    padding: 2em 2em;
+  }
+}
 /*# sourceMappingURL=main.css.map */
