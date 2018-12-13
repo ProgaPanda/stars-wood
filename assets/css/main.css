@@ -52,9 +52,6 @@ body {
   width: 100%;
   margin-top: 3em;
   font-size: 1.2em;
-  position: fixed;
-  -ms-grid-column-align: center;
-      justify-self: center;
   z-index: 100;
 }
 
@@ -106,6 +103,24 @@ body {
   color: #99805f;
   letter-spacing: 2px;
   text-decoration: none;
+  position: relative;
+}
+
+.head .main-nav ul a:after {
+  position: absolute;
+  content: '';
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  z-index: -1;
+  background: #9c4646;
+  -webkit-transition: width 0.2s ease-out;
+  transition: width 0.2s ease-out;
+}
+
+.head .main-nav ul a:hover:after {
+  width: 100%;
 }
 
 .head .hero {
@@ -179,7 +194,7 @@ body {
   text-decoration: none;
   color: #99805f;
   text-align: center;
-  line-height: 55px;
+  line-height: 1.75em;
   font-size: 2em;
   border: 2px solid #99805f;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -208,7 +223,7 @@ body {
   font-weight: normal;
   font-size: 3em;
   text-transform: uppercase;
-  text-shadow: 2px 2px #000000;
+  text-shadow: 2px 2px #704e22;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -221,6 +236,7 @@ body {
   font-size: 1.5em;
   color: #d4b895;
   text-align: justify;
+  text-shadow: 2px 2px #000000;
 }
 
 .about p span {
@@ -408,7 +424,7 @@ body {
   font-weight: normal;
   font-size: 2em;
   text-transform: uppercase;
-  text-shadow: 2px 2px #000000;
+  text-shadow: 2px 2px #704e22;
 }
 
 @media only screen and (max-width: 700px) {
@@ -423,7 +439,18 @@ body {
   display: grid;
   -ms-grid-columns: 0.7fr 1fr;
       grid-template-columns: 0.7fr 1fr;
-  padding: 6em;
+  padding: 2em 6em;
+}
+
+.contact h1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  text-align: center;
+  font-weight: normal;
+  font-size: 2em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #704e22;
 }
 
 .contact form {
@@ -450,8 +477,17 @@ body {
   outline: 2px solid #916f44;
 }
 
+@media only screen and (max-width: 1100px) {
+  .contact form {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    padding: 0;
+  }
+}
+
 .contact form .message {
-  font-size: 1.225em;
+  font-size: 1em;
 }
 
 .contact form button {

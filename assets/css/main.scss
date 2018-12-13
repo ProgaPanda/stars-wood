@@ -41,9 +41,6 @@ body {
         width: 100%;
         margin-top: 3em;
         font-size: 1.2em;
-        //top: 40px;
-        position: fixed;
-        justify-self: center;
         z-index: 100;
 
         @media only screen and (max-width: 1100px) {
@@ -81,6 +78,23 @@ body {
                 color: $text;
                 letter-spacing: 2px;
                 text-decoration: none;
+                position: relative;
+                &:after{
+                    position: absolute;
+                    content: '';
+                    width: 0%;
+                    height: 2px;
+                    bottom: -4px;
+                    left: 0;
+                    z-index: -1;
+                    background: #9c4646;
+                    transition: width 0.2s ease-out;
+                }
+                &:hover{
+                    &:after{
+                        width: 100%;
+                    }
+                }
             }
         }
         
@@ -134,7 +148,7 @@ body {
         text-decoration: none;
         color: $text;
         text-align: center;
-        line-height: 55px;
+        line-height: 1.75em;
         font-size: 2em;
         border: 2px solid $text;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -159,7 +173,7 @@ body {
         font-weight: normal;
         font-size: 3em;
         text-transform: uppercase;
-        text-shadow: 2px 2px #000000;
+        text-shadow: 2px 2px #704e22;
 
         @media only screen and (max-width: 1100px) {
            font-size: 2em;
@@ -169,6 +183,8 @@ body {
         font-size: 1.5em;
         color: #d4b895;
         text-align: justify;
+        text-shadow: 2px 2px #000000;
+
         span{
             font-weight: bold;
         }
@@ -289,7 +305,7 @@ body {
         font-weight: normal;
         font-size: 2em;
         text-transform: uppercase;
-        text-shadow: 2px 2px #000000;
+        text-shadow: 2px 2px #704e22;
 
         @media only screen and (max-width: 700px) {
             margin-bottom: 4em;
@@ -301,7 +317,16 @@ body {
 .contact{
     display: grid;
     grid-template-columns: 0.7fr 1fr;
-    padding: 6em;
+    padding: 2em 6em;
+
+    h1{
+        grid-column: 1/3;
+        text-align: center;
+        font-weight: normal;
+        font-size: 2em;
+        text-transform: uppercase;
+        text-shadow: 2px 2px #704e22;
+    }
     form{
         grid-column: 1/2;
         input, .message{
@@ -319,8 +344,13 @@ body {
                 outline: 2px solid #916f44;
             }
         }
+        @media only screen and (max-width: 1100px) {
+            grid-column: 1/3;
+            padding: 0;
+        }
+
         .message{
-            font-size: 1.225em;
+            font-size: 1em;
         }
 
         button{
