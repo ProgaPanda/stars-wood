@@ -342,7 +342,7 @@ body {
 }
 
 .products .plywood {
-  background-image: url("/assets/img/material-plywood.png");
+  background-image: url("/assets/img/material-plywood.jpg");
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -368,7 +368,7 @@ body {
 }
 
 .products .mdf {
-  background-image: url("/assets/img/material-mdf.png");
+  background-image: url("/assets/img/material-mdf.jpg");
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -392,7 +392,7 @@ body {
 }
 
 .products .hardwood {
-  background-image: url("/assets/img/material-hardwood.png");
+  background-image: url("/assets/img/material-hardwood.jpg");
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -462,7 +462,7 @@ body {
   letter-spacing: 18px;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 700px) {
   .contact h1 {
     font-size: 1em;
   }

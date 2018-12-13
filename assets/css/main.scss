@@ -261,7 +261,7 @@ body {
         }
     }
     .plywood{
-        background-image: url('/assets/img/material-plywood.png');
+        background-image: url('/assets/img/material-plywood.jpg');
         grid-column: 1/2;
         grid-row: 2/3;
         justify-self:right;
@@ -274,7 +274,7 @@ body {
         }
     }
     .mdf{
-        background-image: url('/assets/img/material-mdf.png');
+        background-image: url('/assets/img/material-mdf.jpg');
         grid-column: 2/3;
         grid-row: 1/2;
         color: #351f04;
@@ -286,7 +286,7 @@ body {
         }
     }
     .hardwood{
-        background-image: url('/assets/img/material-hardwood.png');
+        background-image: url('/assets/img/material-hardwood.jpg');
         grid-column: 2/3;
         grid-row: 2/3;
         @media only screen and (max-width: 560px) {
@@ -334,7 +334,7 @@ body {
         text-transform: uppercase;
         text-shadow: 2px 2px #704e22;
         letter-spacing: 18px;
-        @media only screen and (max-width: 1100px) {
+        @media only screen and (max-width: 700px) {
             font-size: 1em;
         }
     }
