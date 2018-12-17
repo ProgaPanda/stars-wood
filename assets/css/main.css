@@ -26,6 +26,10 @@ body {
   background: #e79393;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 .head {
   display: -ms-grid;
   display: grid;
@@ -36,8 +40,8 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.85);
-          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.85);
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.85), 0px 0px 60px 0px #000000;
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.85), 0px 0px 60px 0px #000000;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -215,7 +219,7 @@ body {
 
 @media only screen and (max-width: 1100px) {
   .about {
-    padding: 5em 4em;
+    padding: 5em 4.5em;
   }
 }
 
@@ -245,14 +249,14 @@ body {
 
 @media only screen and (max-width: 1100px) {
   .about p {
-    font-size: 1em;
+    font-size: 1.15em;
   }
 }
 
 .about:before {
   position: absolute;
   left: 0;
-  top: 100px;
+  top: 0;
   content: url(/assets/img/left-art.png);
 }
 
@@ -265,7 +269,7 @@ body {
 .about:after {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 200px;
   content: url(/assets/img/right-art.png);
 }
 
@@ -309,6 +313,7 @@ body {
   background-size: cover;
   -webkit-box-shadow: 0px 10px 15px 0px #000000;
           box-shadow: 0px 10px 15px 0px #000000;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -418,6 +423,8 @@ body {
   margin-top: 10em;
   text-align: center;
   position: relative;
+  -webkit-box-shadow: 0px 25px 60px -15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 25px 60px -15px rgba(0, 0, 0, 0.5);
 }
 
 .map h1 {
@@ -442,7 +449,7 @@ body {
   text-align: center;
   -ms-grid-columns: 0.7fr 1fr;
       grid-template-columns: 0.7fr 1fr;
-  padding: 2em 6em;
+  padding: 4em 6em;
   background: url("/assets/img/contact.jpg");
   background-size: cover;
   background-repeat: no-repeat;
