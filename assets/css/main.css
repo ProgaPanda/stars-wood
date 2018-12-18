@@ -27,7 +27,21 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #272727;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #916f44;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #725836;
 }
 
 .head {
@@ -54,7 +68,7 @@ body {
 
 .head .main-nav {
   width: 100%;
-  margin-top: 3em;
+  margin-top: 1em;
   font-size: 1.2em;
   z-index: 100;
 }
@@ -71,20 +85,26 @@ body {
 }
 
 .head .main-nav .logo {
-  display: inline;
-  margin: 1em;
-  font-weight: 400;
+  margin-left: 2em;
+  width: 120px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1100px) {
   .head .main-nav .logo {
     display: block;
-    text-align: center;
+    margin: 0 auto;
   }
 }
 
 .head .main-nav ul {
   margin: 0;
+  margin-top: 2em;
   margin-right: 2em;
   float: right;
   list-style-type: none;
@@ -213,7 +233,7 @@ body {
 
 @media only screen and (max-width: 560px) {
   .head .go-down {
-    line-height: 2em;
+    line-height: 1.95em;
   }
   .head .go-down:hover {
     background-color: inherit;
