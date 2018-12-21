@@ -323,10 +323,7 @@ body {
 
 @media only screen and (max-width: 560px) {
   .products {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+    display: block;
   }
 }
 
@@ -350,6 +347,13 @@ body {
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 560px) {
+  .products .product {
+    margin: 0 auto;
+    margin-bottom: 4em;
+  }
 }
 
 .products .veneer {
