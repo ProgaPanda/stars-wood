@@ -430,13 +430,7 @@ body {
   font-size: 0.7em;
 }
 
-@media only screen and (max-width: 560px) {
-  .products .modal-content {
-    width: 60%;
-  }
-}
-
-.products .close-button {
+.products .modal-content .close-button {
   float: right;
   width: 1.5rem;
   line-height: 1.5rem;
@@ -447,8 +441,14 @@ body {
   background-color: black;
 }
 
-.products .close-button:hover {
+.products .modal-content .close-button:hover {
   background-color: #1d1d1d;
+}
+
+@media only screen and (max-width: 560px) {
+  .products .modal-content {
+    width: 60%;
+  }
 }
 
 .products .show-modal {

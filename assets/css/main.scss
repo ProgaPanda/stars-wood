@@ -324,23 +324,25 @@ body {
             font-size: 0.7em;
         }
         
+        .close-button {
+            float: right;
+            width: 1.5rem;
+            line-height: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 0.25rem;
+            background-color: black;
+        }
+        .close-button:hover {
+            background-color: rgb(29, 29, 29);
+        }
+
         @media only screen and (max-width: 560px) {
             width: 60%;
         }
     }
-    .close-button {
-        float: right;
-        width: 1.5rem;
-        line-height: 1.5rem;
-        text-align: center;
-        cursor: pointer;
-        font-weight: bold;
-        border-radius: 0.25rem;
-        background-color: black;
-    }
-    .close-button:hover {
-        background-color: rgb(29, 29, 29);
-    }
+
     .show-modal {
         z-index: 150;
         opacity: 1;
