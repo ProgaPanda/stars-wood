@@ -380,7 +380,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: #131518;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.5rem;
   width: 35%;
   border-radius: 0.5rem;
   overflow-y: scroll;
@@ -414,6 +414,18 @@ body {
   width: 100%;
 }
 
+.products .modal-content p {
+  padding: 1em;
+  font-size: 1.1em;
+  background: #000000;
+}
+
+@media only screen and (max-width: 560px) {
+  .products .modal-content p {
+    font-size: 1.25em;
+  }
+}
+
 .products .modal-content span {
   font-size: 0.7em;
 }
@@ -430,6 +442,7 @@ body {
   line-height: 1.5rem;
   text-align: center;
   cursor: pointer;
+  font-weight: bold;
   border-radius: 0.25rem;
   background-color: black;
 }
@@ -439,7 +452,7 @@ body {
 }
 
 .products .show-modal {
-  z-index: 9;
+  z-index: 150;
   opacity: 1;
   visibility: visible;
   -webkit-transform: scale(1);

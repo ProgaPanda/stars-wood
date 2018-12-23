@@ -289,7 +289,7 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: $main;
-        padding: 1rem 1.5rem;
+        padding: 1rem 2.5rem;
         width: 35%;
         border-radius: 0.5rem;
         overflow-y: scroll;
@@ -312,6 +312,14 @@ body {
                 }
             }
         }
+        p{
+            padding: 1em;
+            font-size: 1.1em;
+            background: #000000;
+            @media only screen and (max-width: 560px) {
+                font-size: 1.25em;
+            }
+        }
         span{
             font-size: 0.7em;
         }
@@ -326,6 +334,7 @@ body {
         line-height: 1.5rem;
         text-align: center;
         cursor: pointer;
+        font-weight: bold;
         border-radius: 0.25rem;
         background-color: black;
     }
@@ -333,7 +342,7 @@ body {
         background-color: rgb(29, 29, 29);
     }
     .show-modal {
-        z-index: 9;
+        z-index: 150;
         opacity: 1;
         visibility: visible;
         transform: scale(1.0);
