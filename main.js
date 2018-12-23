@@ -6,27 +6,32 @@ var veneer = document.querySelector(".veneer-modal");
 var mdf = document.querySelector(".mdf-modal");
 var plywood = document.querySelector(".plywood-modal");
 var hardwood = document.querySelector(".hardwood-modal");
-var body = document.getElementsByTagName(body);
+var body = document.getElementsByTagName('body')[0];
 var trigger = document.getElementsByClassName("trigger");
 var closeButton = document.getElementsByClassName("close-button");
 
 function toggleVeneer() {
     veneer.classList.toggle("show-modal");
-    document.getElementsByTagName('body')[0].style.overflow  = 'hidden';
+    body.style.overflow  = 'hidden';
+    body.style.width = 'calc(100% - 15px)';
 }
+
 function toggleMdf() {
     mdf.classList.toggle("show-modal");
-    document.getElementsByTagName('body')[0].style.overflow  = 'hidden';
+    body.style.overflow  = 'hidden';
+    body.style.width = 'calc(100% - 15px)';
 
 }
 function togglePlywood() {
     plywood.classList.toggle("show-modal");
-    document.getElementsByTagName('body')[0].style.overflow  = 'hidden';
+    body.style.overflow  = 'hidden';
+    body.style.width = 'calc(100% - 15px)';
 
 }
 function toggleHardwood() {
     hardwood.classList.toggle("show-modal");
-    document.getElementsByTagName('body')[0].style.overflow  = 'hidden';
+    body.style.overflow  = 'hidden';
+    body.style.width = 'calc(100% - 15px)';
 
 }
 function windowOnClick(event) {
@@ -36,12 +41,15 @@ function windowOnClick(event) {
             for(i = 0; i<trigger.length; i++){
                 modal[i].classList.remove("show-modal")
             }
-            document.getElementsByTagName('body')[0].style.overflowY  = 'scroll';
+            body.style.overflowY  = 'scroll';
+            body.style.width = 'calc(100%)';
         }
 }
 
 function closer() {
-    document.getElementsByTagName('body')[0].style.overflowY  = 'scroll';
+    body.style.overflowY  = 'scroll';
+    body.style.width = 'calc(100%)';
+
     for(i = 0; i<trigger.length; i++){
         modal[i].classList.remove("show-modal")
     }
