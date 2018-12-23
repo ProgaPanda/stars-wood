@@ -13,25 +13,31 @@ var closeButton = document.getElementsByClassName("close-button");
 function toggleVeneer() {
     veneer.classList.toggle("show-modal");
     body.style.overflow  = 'hidden';
-    body.style.width = 'calc(100% - 15px)';
-}
+    if (screen.width >= 600) {
+        body.style.width = 'calc(100% - 15px)';
+    }}
 
 function toggleMdf() {
     mdf.classList.toggle("show-modal");
     body.style.overflow  = 'hidden';
-    body.style.width = 'calc(100% - 15px)';
-
+    if (screen.width >= 600) {
+        body.style.width = 'calc(100% - 15px)';
+    }
 }
 function togglePlywood() {
     plywood.classList.toggle("show-modal");
     body.style.overflow  = 'hidden';
-    body.style.width = 'calc(100% - 15px)';
-
+    if (screen.width >= 600) {
+        body.style.width = 'calc(100% - 15px)';
+    }
 }
 function toggleHardwood() {
     hardwood.classList.toggle("show-modal");
     body.style.overflow  = 'hidden';
-    body.style.width = 'calc(100% - 15px)';
+
+    if (screen.width >= 600) {
+        body.style.width = 'calc(100% - 15px)';
+    }
 
 }
 function windowOnClick(event) {
