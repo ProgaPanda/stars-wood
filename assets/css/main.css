@@ -381,8 +381,14 @@ body {
           transform: translate(-50%, -50%);
   background-color: #131518;
   padding: 1rem 1.5rem;
-  width: 24rem;
+  width: 35%;
   border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 560px) {
+  .products .modal-content {
+    width: 85%;
+  }
 }
 
 .products .close-button {

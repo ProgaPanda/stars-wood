@@ -290,8 +290,11 @@ body {
         transform: translate(-50%, -50%);
         background-color: $main;
         padding: 1rem 1.5rem;
-        width: 24rem;
+        width: 35%;
         border-radius: 0.5rem;
+        @media only screen and (max-width: 560px) {
+            width: 85%;
+        }
     }
     .close-button {
         float: right;
