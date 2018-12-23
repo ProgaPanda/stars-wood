@@ -432,7 +432,7 @@ body {
 
 @media only screen and (max-width: 560px) {
   .products .modal-content {
-    width: 75%;
+    width: 60%;
   }
 }
 
