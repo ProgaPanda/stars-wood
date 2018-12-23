@@ -383,6 +383,35 @@ body {
   padding: 1rem 1.5rem;
   width: 35%;
   border-radius: 0.5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 80%;
+}
+
+.products .modal-content .thumb-container {
+  margin-top: 4em;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+  -webkit-column-count: 2;
+          column-count: 2;
+}
+
+@media only screen and (max-width: 560px) {
+  .products .modal-content .thumb-container {
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+}
+
+.products .modal-content .thumb-container .thumb {
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+  border: 3px solid #99805f;
+}
+
+.products .modal-content .thumb-container .thumb img {
+  width: 100%;
 }
 
 @media only screen and (max-width: 560px) {

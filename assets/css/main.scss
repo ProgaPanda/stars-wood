@@ -292,6 +292,27 @@ body {
         padding: 1rem 1.5rem;
         width: 35%;
         border-radius: 0.5rem;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-height: 80%;
+        .thumb-container{
+            margin-top: 4em;
+            column-gap: 1em;
+            column-count: 2;
+            @media only screen and (max-width: 560px) {
+                column-count: 1;
+            }
+            .thumb {
+                display: inline-block;
+                margin: 0 0 1em;
+                width: 100%;
+                border: 3px solid $text;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        
         @media only screen and (max-width: 560px) {
             width: 75%;
         }
