@@ -144,10 +144,12 @@
  <!-- contact section -->
 <section id="contact" class="contact">
         <h1>Contact Us</h1>
-        <form name="contact" netlify>
+        <form name="contact" netlify-honeypot="bot-field" netlify>
+            <input name="bot-field" style="display: none"/>
             <input type="text" name="name" placeholder="YOUR NAME" autocomplete="off" spellcheck="false" required/>
             <input type="email" name="email" placeholder="EMAIL" autocomplete="off" spellcheck="false" required/>
             <textarea name="messege" class="message" rows="10"  placeholder="MESSAGE" required></textarea>
+            <div data-netlify-recaptcha="true"></div>
             <button type="submit">Send</button>
         </form>
         <div class="social">
